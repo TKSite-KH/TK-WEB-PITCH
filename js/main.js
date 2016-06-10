@@ -6,36 +6,36 @@
 /**
  * Main AngularJS Web Application
  */
-var app = angular.module('tutorialWebApp', [
-  'ngRoute'
-]);
+angular.module('TK-WEB-PITCH', [
+  'ngRoute','LocalStorageModule'
+])
+    .config(['$routeProvider', function ($routeProvider) {
 
-/**
- * Configure the Routes
- */
-app.config(['$routeProvider', function ($routeProvider) {
-  $routeProvider
-    // Home
-    .when("/", {templateUrl: "partials/dashboard.html", controller: "PageCtrl"})
-    // Pages
-    .when("/blank", {templateUrl: "partials/blank.html", controller: "PageCtrl"})
-    .when("/buttons", {templateUrl: "partials/buttons.html", controller: "PageCtrl"})
-    .when("/flot", {templateUrl: "partials/flot.html", controller: "PageCtrl"})
-    .when("/forms", {templateUrl: "partials/forms.html", controller: "PageCtrl"})
-    .when("/grid", {templateUrl: "partials/grid.html", controller: "PageCtrl"})
-    .when("/morris", {templateUrl: "partials/morris.html", controller: "PageCtrl"})
-    .when("/notifications", {templateUrl: "partials/notifications.html", controller: "PageCtrl"})
-    .when("/panels-wells", {templateUrl: "partials/panels-wells.html", controller: "PageCtrl"})
-    .when("/tables", {templateUrl: "partials/tables.html", controller: "PageCtrl"})
-    .when("/typography", {templateUrl: "partials/typography.html", controller: "PageCtrl"})
-    // else 404
-    .otherwise("/404", {templateUrl: "partials/404.html", controller: "PageCtrl"});
-}]);
+        $routeProvider
+            // Home
+            .when("/", {templateUrl: "partials/dashboard.html", controller: "MainController"})
+            // Pages
+            .when("/blank", {templateUrl: "partials/blank.html", controller: "MainController"})
+            .when("/buttons", {templateUrl: "partials/buttons.html", controller: "MainController"})
+            .when("/flot", {templateUrl: "partials/flot.html", controller: "MainController"})
+            .when("/forms", {templateUrl: "partials/forms.html", controller: "MainController"})
+            .when("/grid", {templateUrl: "partials/grid.html", controller: "MainController"})
+            .when("/morris", {templateUrl: "partials/morris.html", controller: "MainController"})
+            .when("/notifications", {templateUrl: "partials/notifications.html", controller: "MainController"})
+            .when("/panels-wells", {templateUrl: "partials/panels-wells.html", controller: "MainController"})
+            .when("/tables", {templateUrl: "partials/tables.html", controller: "MainController"})
+            .when("/typography", {templateUrl: "partials/typography.html", controller: "MainController"})
+            // else 404
+            .otherwise("/404", {templateUrl: "partials/404.html", controller: "MainController"});
+    }])
+    .config(['localStorageServiceProvider', function (localStorageServiceProvider){
+        localStorageServiceProvider.setPrefix('TK-WEB-PITCH');
+    }])
+    .controller('MainController', function($scope, $location, localStorageService){
+        if(localStorageService.get('userData') == null || localStorageService.get('userData') == "0"){
+            window.location = "./login.html";
+        }
 
-/**
- * Controls all other Pages
- */
-app.controller('PageCtrl', function (/* $scope, $location, $http */) {
-  console.log("Page Controller reporting for duty.");
+    });
 
-});
+
