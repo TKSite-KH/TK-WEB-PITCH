@@ -32,8 +32,8 @@ app
         }
 
         $scope.logout = function(){
-            localStorageService.set('userId', '0');
-            window.location = "./login.html";
+           localStorageService.set('userId', '0');
+           window.location = "./login.html";
         }
 
     }]);

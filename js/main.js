@@ -32,7 +32,7 @@ var app = angular.module('TK-WEB-PITCH', [
         localStorageServiceProvider.setPrefix('TK-WEB-PITCH');
     }])
     .controller('MainController', function($scope, $location, localStorageService){
-        if(localStorageService.get('userId') == null || localStorageService.get('userId') == "0"){
+        if(localStorageService.get('userId') == null || localStorageService.get('userId') == '0'){
             window.location = "./login.html";
         }else{
 
