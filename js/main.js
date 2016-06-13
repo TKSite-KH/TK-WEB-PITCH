@@ -6,9 +6,7 @@
 /**
  * Main AngularJS Web Application
  */
-var app = angular.module('TK-WEB-PITCH', [
-  'ngRoute','LocalStorageModule'
-])
+var app = angular.module('TK-WEB-PITCH', ['ngRoute','LocalStorageModule','ui.rCalendar'])
     .config(['$routeProvider', function ($routeProvider) {
 
         $routeProvider
@@ -43,9 +41,8 @@ var app = angular.module('TK-WEB-PITCH', [
         }else{
 
         }
-        //alert(localStorageService.get('userId'))
 
-
-    });
+    })
+    ;
 
 

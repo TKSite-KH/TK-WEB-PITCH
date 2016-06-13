@@ -1105,21 +1105,21 @@ angular.module("template/rcalendar/month.html", []).run(["$templateCache", funct
     "        </tr>\n" +
     "        </tbody>\n" +
     "    </table>\n" +
-    "    <div ng-if=\"showEventDetail\" class=\"event-detail-container\">\n" +
-    "        <div class=\"scrollable\" style=\"height: 200px\">\n" +
-    "            <table class=\"table table-bordered table-striped table-fixed\">\n" +
-    "                <tr ng-repeat=\"event in selectedDate.events\" ng-if=\"selectedDate.events\">\n" +
-    "                    <td ng-if=\"!event.allDay\" class=\"monthview-eventdetail-timecolumn\">{{event.startTime|date: 'HH:mm'}}\n" +
-    "                        -\n" +
-    "                        {{event.endTime|date: 'HH:mm'}}\n" +
-    "                    </td>\n" +
-    "                    <td ng-if=\"event.allDay\" class=\"monthview-eventdetail-timecolumn\">All day</td>\n" +
-    "                    <td class=\"event-detail\" ng-click=\"eventSelected({event:event})\">{{event.title}}</td>\n" +
-    "                </tr>\n" +
-    "                <tr ng-if=\"!selectedDate.events\"><td class=\"no-event-label\">No Events</td></tr>\n" +
-    "            </table>\n" +
-    "        </div>\n" +
-    "    </div>\n" +
+    //"    <div ng-if=\"showEventDetail\" class=\"event-detail-container\">\n" +
+    //"        <div class=\"scrollable\" style=\"height: 200px\">\n" +
+    //"            <table class=\"table table-bordered table-striped table-fixed\">\n" +
+    //"                <tr ng-repeat=\"event in selectedDate.events\" ng-if=\"selectedDate.events\">\n" +
+    //"                    <td ng-if=\"!event.allDay\" class=\"monthview-eventdetail-timecolumn\">{{event.startTime|date: 'HH:mm'}}\n" +
+    //"                        -\n" +
+    //"                        {{event.endTime|date: 'HH:mm'}}\n" +
+    //"                    </td>\n" +
+    //"                    <td ng-if=\"event.allDay\" class=\"monthview-eventdetail-timecolumn\">All day</td>\n" +
+    //"                    <td class=\"event-detail\" ng-click=\"eventSelected({event:event})\">{{event.title}}</td>\n" +
+    //"                </tr>\n" +
+    //"                <tr ng-if=\"!selectedDate.events\"><td class=\"no-event-label\">No Events</td></tr>\n" +
+    //"            </table>\n" +
+    //"        </div>\n" +
+    //"    </div>\n" +
     "</div>");
 }]);
 
