@@ -6,15 +6,19 @@
 /**
  * Main AngularJS Web Application
  */
-var app = angular.module('TK-WEB-PITCH', [
-  'ngRoute','LocalStorageModule'
-])
+var app = angular.module('TK-WEB-PITCH', ['ngRoute','LocalStorageModule','ui.rCalendar'])
     .config(['$routeProvider', function ($routeProvider) {
 
         $routeProvider
             // Home
-            .when("/", {templateUrl: "partials/dashboard.html", controller: "MainController"})
-            // Pages
+            .when("/", {templateUrl: "tk_partials/tk_dashboard.html", controller: "MainController"})
+            // Pages Tarang Khmer
+            .when("/tk_profile", {templateUrl: "tk_partials/tk_profile.html", controller: "MainController"})
+            .when("/tk_pitch", {templateUrl: "tk_partials/tk_pitch.html", controller: "MainController"})
+            .when("/tk_promotion", {templateUrl: "tk_partials/tk_promotions.html", controller: "MainController"})
+
+            // Pages default
+            .when("/dashboard", {templateUrl: "partials/dashboard.html", controller: "MainController"})
             .when("/blank", {templateUrl: "partials/blank.html", controller: "MainController"})
             .when("/buttons", {templateUrl: "partials/buttons.html", controller: "MainController"})
             .when("/flot", {templateUrl: "partials/flot.html", controller: "MainController"})
@@ -37,9 +41,8 @@ var app = angular.module('TK-WEB-PITCH', [
         }else{
 
         }
-        //alert(localStorageService.get('userId'))
 
-
-    });
+    })
+    ;
 
 

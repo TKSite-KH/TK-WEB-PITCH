@@ -1,0 +1,131 @@
+
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Dashboard</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <div class="well well-sm">
+                <calendar ng-model="currentDate" calendar-mode="mode" event-source="eventSource"
+                          range-changed="reloadSource(startTime, endTime)"
+                          event-selected="onEventSelected(event)"
+                          time-selected="onTimeSelected(selectedTime)"></calendar>
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-6 col-md-9">
+                    <div class="panel panel-primary">
+            <button type="button" class="btn btn-outline btn-primary btn-lg btn-block">Add Booking</button>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-9">
+                    <div class="panel panel-primary">
+            <button type="button" class="btn btn-outline btn-primary btn-lg btn-block">Cancel Booking</button>
+                        </div>
+                </div>
+            </div>
+
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Morning
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th> Pitch Number </th>
+                                        <th> Booking Name</th>
+                                        <th> Booking Phone Number </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                        <td>@fat</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Larry</td>
+                                        <td>the Bird</td>
+                                        <td>@twitter</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.table-responsive -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Hover Rows
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th> Pitch Number </th>
+                                        <th> Booking Name</th>
+                                        <th> Booking Phone Number </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                        <td>@fat</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Larry</td>
+                                        <td>the Bird</td>
+                                        <td>@twitter</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.table-responsive -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+
+                <!-- /.col-lg-6 -->
+            </div>
+
+        </div>
+        <!-- /#page-wrapper -->
+
+
+        <!--<!-- Custom Theme JavaScript -->-->
+        <script src="js/sb-admin-2.js"></script>
