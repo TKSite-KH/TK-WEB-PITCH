@@ -12,6 +12,7 @@ app
                 + "user_password=" + $scope.userPassword
 
             HttpFactory.login($scope.url,data).success(function(data){
+                //console.log(data);
                 if(data['respond']['statusName'] == 'loginSuccess')
                 {
                     localStorageService.set('userId', data['respond']['Sportclub']['id']);
