@@ -207,7 +207,7 @@ body {
 }
 
 .login-panel {
-    margin-top: 25%;
+    margin-top: 5%;
 }
 
 .flot-chart {
@@ -342,4 +342,11 @@ table.dataTable thead .sorting:after {
 
 .panel-yellow a:hover {
     color: #df8a13;
+}
+.full {
+    background: url('../img/backgrounds/login_background.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
 }

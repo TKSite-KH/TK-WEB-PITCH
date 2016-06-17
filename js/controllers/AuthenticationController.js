@@ -2,6 +2,7 @@
  * Created by BlueX on 6/7/16.
  */
 app
+
     .controller('AuthenticationController',['$scope','ConstantFactory','HttpFactory', 'localStorageService',function($scope, ConstantFactory, HttpFactory, localStorageService){
         //alert("hello");
         $scope.userEmail = "";
@@ -12,6 +13,7 @@ app
                 + "user_password=" + $scope.userPassword
 
             HttpFactory.login($scope.url,data).success(function(data){
+                console.log(data);
                 if(data['respond']['statusName'] == 'loginSuccess')
                 {
                     localStorageService.set('userId', data['respond']['Sportclub']['id']);
