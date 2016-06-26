@@ -350,3 +350,78 @@ table.dataTable thead .sorting:after {
     background-size: cover;
     -o-background-size: cover;
 }
+.circle-red {
+    width: 21px;
+    height: 21px;
+    /*-webkit-border-radius: 25px;*/
+    /*-moz-border-radius: 25px;*/
+    border-radius: 25px;
+    background: red;
+    text-align: center;
+    vertical-align: middle;
+    float: left;
+    margin-left: 2px;
+    margin-right: 2px;
+    line-height: 21px;
+}
+.circle-yellow {
+    width: 21px;
+    height: 21px;
+    /*-webkit-border-radius: 25px;*/
+    /*-moz-border-radius: 25px;*/
+    border-radius: 25px;
+    background: #ffff00;
+    text-align: center;
+    vertical-align: middle;
+    float: left;
+    margin-left: 2px;
+    margin-right: 2px;
+    line-height: 21px;
+}
+.circle-green {
+    width: 21px;
+    height: 21px;
+    /*-webkit-border-radius: 25px;*/
+    /*-moz-border-radius: 25px;*/
+    border-radius: 25px;
+    background: green;
+    text-align: center;
+    vertical-align: middle;
+    float: left;
+    margin-left: 2px;
+    margin-right: 2px;
+    line-height: 21px;
+}
+.navbar-admin {
+    background-color: #0e9648;
+    border-color: #e7e7e7
+}
+/* Modal Popup Style */
+
+.modal-content {
+    border-radius: 0px;
+    background-color: transparent;
+    background-color: #0E9648;
+}
+
+.modal-header {
+    color: white;
+    background-color: rgba(152, 215, 150, 0.30);
+}
+
+.modal-header h4 {
+    font-weight: 700;
+}
+
+.modal-body {
+    font-family: "Lato";
+    font-weight: 300;
+    font-size: 16px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.48);
+}
+
+.modal-footer {
+    margin-top: 0px;
+    background-color: rgba(152, 215, 150, 0.30);
+}
